@@ -71,9 +71,9 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
 
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
                       f"#WARNn<b>Admin:</b> {warner_tag}\n"
-                      f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
-                      f"<b>Reason:</b> {reason}\n"
-                      f"<b>Counts:</b> <code>{num_warns}/{limit}</code>")
+                      f"<b>User Information:</b> {mention_html(user.id, user.first_name)}\n"
+                      f"<b>⭕ Reason For the Warning ⭕:</b> {reason}\n"
+                      f"<b>⭕ Counts ⭕:</b> <code>{num_warns}/{limit}</code>")
 
     try:
         message.reply_text(reply, reply_markup=keyboard, parse_mode=ParseMode.HTML)
@@ -152,7 +152,7 @@ def reset_warns(bot: Bot, update: Update, args: List[str]) -> str:
         return (f"<b>{html.escape(chat.title)}:</b>\n"
                 f"#RESETWARNS\n"
                 f"<b>Admin:</b> {mention_html(user.id, user.first_name)}\n"
-                f"<b>User:</b> {mention_html(warned.id, warned.first_name)}")
+                f"<b>🙍 User Information 🙍:</b> {mention_html(warned.id, warned.first_name)}")
     else:
         message.reply_text("No user has been designated!")
     return ""

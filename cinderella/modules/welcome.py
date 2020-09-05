@@ -163,7 +163,7 @@ def new_member(bot: Bot, update: Update):
 
             # Make bot greet admins
             elif new_mem.id == bot.id:
-                update.effective_message.reply_text("Hey {}, I'm {}! Thank you for adding me to {}" 
+                update.effective_message.reply_text("Hey {}, I'm Palak Sidhwani! Thank you for adding me to {}" 
                 " and be sure to check /help in PM for more commands and tricks!".format(user.first_name, bot.first_name, chat_name))
                 bot.send_message(
                     MESSAGE_DUMP,

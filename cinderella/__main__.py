@@ -30,7 +30,7 @@ PM_START_TEXT = """
 _Hello_ *{}*
 _I am Palak Sidhwani (Sonu 🤗).
 I am a Powerful Telegram ProBot to Manage Your Groups 💪. I have Many Pro Features. Add me in Your Group Now !!!_
-_Maintained by_ [{}](tg://user?id={})
+_Maintained by Mr. PS_ [{}](tg://user?id={})
 """
 
 

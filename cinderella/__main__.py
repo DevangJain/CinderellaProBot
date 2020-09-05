@@ -28,7 +28,8 @@ from cinderella.modules.connection import connect_button
 
 PM_START_TEXT = """
 _Hello_ *{}*
-_My name is_ *{}*\n_A Powerful Telegram ProBot to Manage Your Groups,feel free to add to your groups!!_
+_I am Palak Sidhwani (Sonu 🤗).
+I am a Powerful Telegram ProBot to Manage Your Groups 💪. I have Many Pro Features. Add me in Your Group Now !!!_
 _Maintained by_ [{}](tg://user?id={})
 """
 

@@ -56,13 +56,13 @@ def warn(user: User, chat: Chat, reason: str, message: Message, warner: User = N
         log_reason = (f"<b>{html.escape(chat.title)}:</b>\n"
                       f"#WARN_BAN\n"
                       f"<b>Admin:</b> {warner_tag}\n"
-                      f"<b>User:</b> {mention_html(user.id, user.first_name)}\n"
-                      f"<b>Reason:</b> {reason}\n"
-                      f"<b>Counts:</b> <code>{num_warns}/{limit}</code>")
+                      f"<b>User Information:</b> {mention_html(user.id, user.first_name)}\n"
+                      f"<b>⭕ Reason For the Warning ⭕:</b> {reason}\n"
+                      f"<b>⭕ Counts ⭕:</b> <code>{num_warns}/{limit}</code>")
 
     else:
         
-        keyboard = InlineKeyboardMarkup([{InlineKeyboardButton("Remove warn",
+        keyboard = InlineKeyboardMarkup([{InlineKeyboardButton("🕹️ Remove warn 🕹️",
                                                                callback_data="rm_warn({})".format(user.id))}])
 
         reply = f"{mention_html(user.id, user.first_name)} has {num_warns}/{limit} warnings... watch out!"
@@ -100,7 +100,7 @@ def button(bot: Bot, update: Update) -> str:
         res = sql.remove_warn(user_id, chat.id)
         if res:
             update.effective_message.edit_text(
-                "Warn removed by {}.".format(mention_html(user.id, user.first_name)),
+                "This Warn ⭕ removed by {}.".format(mention_html(user.id, user.first_name)),
                 parse_mode=ParseMode.HTML)
             user_member = chat.get_member(user_id)
             return (f"<b>{html.escape(chat.title)}:</b>\n"

@@ -37,4 +37,3 @@ pytz
 parsel
 hurry.filesize
 spamwatch
-tldextract

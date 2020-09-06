@@ -5,10 +5,10 @@ from telegram.error import BadRequest
 from telegram.ext import CommandHandler, Filters, MessageHandler, run_async
 
 import tldextract
-from haruka import LOGGER, dispatcher
-from haruka.modules.disable import DisableAbleCommandHandler
-from haruka.modules.helper_funcs.chat_status import user_admin, user_not_admin
-from haruka.modules.sql import urlblacklist_sql as sql
+from cindrella import LOGGER, dispatcher
+from cindrella.modules.disable import DisableAbleCommandHandler
+from cindrella.modules.helper_funcs.chat_status import user_admin, user_not_admin
+from cindrella.modules.sql import urlblacklist_sql as sql
 
 
 @run_async

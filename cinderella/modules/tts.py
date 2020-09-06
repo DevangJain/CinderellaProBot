@@ -36,8 +36,8 @@ def tts(bot: Bot, update: Update, args):
     with open("k.mp3", "rb") as speech:
         update.message.reply_voice(speech, quote=False)
 
-__help__ = """ Text to speech
-- /tts <your text>
+__help__ = """ 🔰 Pro Feature 🔰/p 🔵 You can Convert the Text to speech 🔵
+ 🔴 /tts <your text> 🔴
 """
 __mod_name__ = "TEXT TO SPEECH"
 
